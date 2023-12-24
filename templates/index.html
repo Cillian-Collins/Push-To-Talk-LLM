@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Record Page</title>
+  <!-- Bootstrap CSS from a public CDN -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS from a public CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #microphone-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #microphone {
+      font-size: 5em;
+      cursor: pointer;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    #microphone.recording {
+      animation: pulse 1s infinite; /* Pulsating animation when recording */
+    }
+  </style>
+</head>
+<body>
+
+<div id="microphone-container">
+  <div id="microphone" class="text-center" title="Click to Record">
+    <i class="fas fa-microphone" id="recordButton"></i>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <textarea class="form-control" rows="5" placeholder="Type something here..." id="transcription"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and jQuery from public CDNs -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/static/scripts/index.js"></script>
+
+</body>
+</html>
